@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maharashtra Engineering College Admission Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Maharashtra Engineering College Admission Predictor</h1>
+            <p>Find your dream engineering college in Maharashtra based on your qualification and scores!</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="form-section">
+                <form id="admission-form">
+                    <div class="form-group">
+                        <label for="qualification">Qualification:</label>
+                        <select id="qualification" name="qualification" required>
+                            <option value="" disabled selected>Select your qualification</option>
+                            <option value="12th">12th Grade</option>
+                            <option value="Diploma">Diploma</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="mhtcet-group" style="display: none;">
+                        <label for="mhtcet">Enter your MHT CET percentile:</label>
+                        <input type="number" id="mhtcet" name="mhtcet" min="0" max="100" step="0.01">
+                    </div>
+                    <div class="form-group" id="percentage-group" style="display: none;">
+                        <label for="percentage">Enter your percentage:</label>
+                        <input type="number" id="percentage" name="percentage" min="0" max="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">Select your preferred branch:</label>
+                        <select id="branch" name="branch" required>
+                            <option value="" disabled selected>Select branch</option>
+                            <option value="Computer">Computer Engineering</option>
+                            <option value="Mechanical">Mechanical Engineering</option>
+                            <option value="Electronics">Electronics Engineering</option>
+                            <option value="Civil">Civil Engineering</option>
+                            <option value="IT">Information Technology</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Select your category:</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled selected>Select category</option>
+                            <option value="Open">Open</option>
+                            <option value="SC">Scheduled Caste (SC)</option>
+                            <option value="ST">Scheduled Tribe (ST)</option>
+                            <option value="OBC">Other Backward Class (OBC)</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="district">Select your district:</label>
+                        <select id="district" name="district" required>
+                            <option value="" disabled selected>Select district</option>
+                            <!-- Districts will be populated dynamically using JavaScript -->
+                        </select>
+                    </div>
+                    <button type="submit">Get Colleges</button>
+                </form>
+            </section>
+            <section class="results-section" id="results-section">
+                <h2>Suggested Colleges</h2>
+                <ul id="college-list"></ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Maharashtra Engineering College Admission Predictor. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
